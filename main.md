@@ -115,6 +115,32 @@ $$
 
 </div>
 
+
+<!--v-->
+
+## Audiovisual response in primary sensory areas
+
+<font size=6>
+
+
+ 1. Are they really there? (or is just movement?)
+ 2. What kind of audiovisual information do they contain? 
+	 - eg. just presense / absence of the other modality?
+ 
+
+</font>
+
+<!--v-->
+
+
+## What determines whether multisensory activity will occur/develop? 
+
+ - temporal coherence?
+ - is supervised learning required for multimodal integration in the cortex? 
+     - eg. associating reward / punishment to specific audio-visual pair 
+	 - eg. decision making task
+
+
 <!--h-->
 
 ### What are the neural mechanisms of multimodal decision making?
@@ -155,17 +181,6 @@ Audio-visual decision making task
 
 </div>
 
-
-
-<!--v-->
-
-
-## What determines whether multisensory activity will occur/develop? 
-
- - temporal coherence?
- - is supervised learning required for multimodal integration in the cortex? 
-     - eg. associating reward / punishment to specific audio-visual pair 
-	 - eg. decision making task
 
 
 <!--h-->
@@ -227,15 +242,33 @@ Fading (6 seconds / video)
  
  <!--v-->
  
+<font size=5>
  
- Why natural videos > gratings / pure tones:
+Natural videos vs. gratings / pure tones:
   
-   - high dimensional
-	  - look at high dimensional neural activity 
-	  - more likely to evoke audio-visual activity
-   - (ecologically relevant?)
+ - look at high dimensional neural activity 
+ - more / less likely to evoke audio-visual activity?
+ - natural from human vs. from lab mice point of view
  
-  <!--v-->
+ 
+ </font>
+ 
+ ![Grating world](./figures/orientation_pure_tone_combinations.png)
+ 
+  
+<!--v-->
+
+### Extending the passive stimulus experiment 
+
+<font size=6>
+
+ 1. Compare activity during strongly temporally coherent audio-visual stimulus vs. incoherent / random stimulus 
+ 2. Over-represent a proportion of audio-visual stimulus and look at changes in neural activity over days (multimodal unsupservised learning) (and perhaps monitor surprise using pupil diameter)
+ 3. Associated audio-visual features / pairings with reward 
+
+</font>
+
+
   
 <!--h-->
 
@@ -418,6 +451,16 @@ some neurons seem to care about auditory stimulus
 
 ![TS004 interval audio-video neuron audio respones](./figures/filmworld/correlation/old_figs/plane_5_cell_342video_0_correlation.png) <!-- .element  width="60%"; style="margin:auto;display:block" -->
 
+
+
+<!--h-->
+
+
+### Summary 
+
+
+ 1. Mostly visual information at the population level in the PPC region recorded 
+ 2. But single neuron analysis show there may be some auditory information... 
 
 
 <!--h-->
@@ -623,8 +666,34 @@ Decoding audio left/right in the same experiment as the example cell shown befor
 
 </div>
 
+<!--v-->
+
+### Audio onset information is present in most brain regions in active conditions
+
+
+![Audio on/off decoding](./figures/multispaceworld/multispaceworld-decoding/subject_3_exp_24_aud_on_off_windowed_classification_svm_l1_C_untuned_w_hline_w_error_shade_brain_regions_combined_include_baseline.png) <!-- .element  width="60%"; style="margin:auto;display:block" -->
+
 
 <!--v-->
+
+
+### MOs responds to visual direction in passive conditions 
+
+<div id='left'>
+
+![Visual left/right PSTH](./figures/multispaceworld/passiveReponse/peri_stimulus_visual_left_vs_right_subject_3_experiment_31_cell_111w_grid.svg)
+
+</div>
+
+<div id='right'>
+
+![Visul left/right](./figures/multispaceworld/passiveReponse/vis_left_right_subject_3_exp_31_cell_111_scatter.svg)
+
+</div>
+
+
+<!--v-->
+
 
 
 ### Time of auditory and visual information 
@@ -647,16 +716,41 @@ Hypothesis:
  
  <!--v-->
  
- ![Example neuoron that is close to illustrating the point](./figures/multispaceworld/peri_stimulus_audio_left_right_subject_6_experiment_54_cell_70w_grid_unimodal_only.svg)
+![Example neuoron that is close to illustrating the point](./figures/multispaceworld/peri_stimulus_audio_left_right_subject_6_experiment_54_cell_70w_grid_unimodal_only.svg) <!-- .element  width="60%"; style="margin:auto;display:block" -->
+ 
+<!--v--> 
+ 
+ 
+ <div id='left'>
+ 
+ Auditory left /right 
+ 
+ 
+![Aud left right](./figures/multispaceworld/timeOfInfo/30ms_time_bin_50_bin_alignment_all_subject_exp_windowed_ranksum_test_0p01_aud_left_right.png)
+
   
+</div>
+
+
+<div id='right'>
+
+Auditory on/off 
+ 
+![Aud on off ](./figures/multispaceworld/timeOfInfo/30ms_time_bin_50_bin_alignment_all_subject_exp_windowed_ranksum_test_0p01_aud_on_off.png)
+
+</div>
+
+
 
 <!--v-->
 
+### Peak times
 
-![Mean of peak time ](./figures/multispaceworld/timeOfInfo/all_exp_sig_neuron_mean_time_of_peak_neuron_type_grouped_threshold_0p05.svg)
+![Mean of peak time ](./figures/multispaceworld/timeOfInfo/all_exp_sig_neuron_mean_time_of_peak_neuron_type_grouped_threshold_0p05.svg)  <!-- .element  width="60%"; style="margin:auto;display:block" -->
 
  
- <!--h-->
+ 
+  <!--h-->
  
 
 # Future directions 
@@ -693,26 +787,46 @@ Hypothesis:
  
 
 
-
  <!--h-->
 
 
-## Other ideas
+## Other ideas / side-projects
 
 <!--v-->
 
-## Filmworld for addressing the how question of multisensory integration 
-
- - present set of stimulus multiple times 
- - some of them temporally coherent and 'true' (occurs in nature)
- - some of them temporally incoherent and 'true' (animal and some background sound) 
- - some of them temporally coherent but false (artificial sounds, dubbing) 
- - some of them temporally inchoerent and false (random video and random audio)
+### Dash2P: Quick exploratory analysis 
 
 
+<font size=6>
+
+ 1. 70% of neural analysis involves correlating variable $x$ with neural activity $y$
+ 2. a lot of time is spent on writing code to load and coerce my data in some ways to do (1) 
+ 3. The standardisation problem is already mostly solved: rigbox, suite2p etc. so standardising early exploratory analysis can be done
+ 
+ 
+ 
+ </font>
+ 
+<!--v-->
+
+### Dash2p demo 
+
+
+<video controls width="500">
+	   <source src="./videos/dash2p-first-demo.webm" type="video/webm">
+	    <source src="./videos/dash2p-first-demo.mp4" type="video/mp4" >
+</video>
 
 
 
+<!--v-->
+
+
+### Dash2p todos 
+
+ - grouped alignment: eg. visual contrast value
+ - signficance test / distribution comparisons
+ - dimensionality reduction
 
 
  
